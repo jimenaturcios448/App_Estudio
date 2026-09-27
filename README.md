@@ -2,7 +2,7 @@
 
 Aplicación web interactiva diseñada para transformar material de estudio en preguntas, tarjetas y cuestionarios a partir de documentos e imágenes.
 
-🔗 **[🚀 Ver el proyecto en vivo](https://jimenaturcios448.github.io/app_estudio/)**
+🔗 **[🚀 Ver el proyecto en vivo](https://jimenaturcios448.github.io/App_Estudio/)**
 
 ---
 
