@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0e14">
+    <meta name="description" content="Estudio: organiza tus materias, crea tarjetas de estudio y practica con cuestionarios.">
+
+    <title>Estudio | Tu espacio de aprendizaje</title>
+
+    <!-- Tipografías elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Estilos de la aplicación -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fondo ambiental -->
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <!-- Aplicación -->
+    <div class="app-shell">
+
+        <!-- Encabezado principal -->
+        <header class="topbar">
+
+            <a href="#" class="brand" id="brandHome" aria-label="Ir al inicio">
+                <span class="brand-icon" aria-hidden="true">✦</span>
+
+                <span  class="brand-name">
+                    Estudio
+                </span>
+            </a>
+
+            <nav class="topbar-nav" id="topbarNav" aria-label="Navegación principal">
+                <!-- Los botones se generan desde script.js -->
+            </nav>
+
+        </header>
+
+        <!-- Contenido dinámico -->
+        <main id="app" tabindex="-1">
+
+            <section class="loading-screen" aria-live="polite">
+                <div class="loading-symbol">✦</div>
+                <h1>Preparando tu espacio</h1>
+                <p>Tu próximo momento de aprendizaje comienza aquí.</p>
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="app-footer">
+            <div class="footer-line"></div>
+
+            <p>
+                <span class="footer-star" aria-hidden="true">✦</span>
+                       Un espacio para aprender a tu ritmo.
+            </p>
+
+            <span class="footer-caption">ESTUDIO</span>
+        </footer>
+
+    </div>
+
+    <!-- Librería para leer archivos PDF -->
+    <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
+    </script>
+
+    <!-- Librería OCR para reconocer texto en imágenes -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js">
+    </script>
+
+    <!-- Lógica principal de la aplicación -->
+    <script src="script.js"></script>
+
+    <!-- Acceso al inicio desde el logotipo -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const brandHome = document.getElementById("brandHome");
+
+            if (brandHome) {
+                brandHome.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    if (typeof goHome === "function") {
+                        goHome();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
