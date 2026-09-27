@@ -1,310 +1,55 @@
-# 📚 Estudio
+# Estudio
 
-Aplicación web interactiva diseñada para transformar material de estudio en preguntas, tarjetas y cuestionarios a partir de documentos e imágenes.
+Aplicación web para convertir tus apuntes en tarjetas de estudio y cuestionarios. Sube un PDF o una foto de tus notas, la app extrae el texto automáticamente (con OCR si hace falta), y en segundos tienes un mazo de flashcards listo para repasar o un quiz para ponerte a prueba.
 
-🔗 **[🚀 Ver el proyecto en vivo](https://jimenaturcios448.github.io/App_Estudio/)**
-
----
-
-## ✨ Características
-
-- 📄 Importación de archivos PDF.
-- 🖼️ Importación de imágenes PNG y JPG.
-- 🔎 Extracción automática de texto.
-- 👁️ Reconocimiento óptico de caracteres (OCR).
-- 🧠 Generación automática de preguntas y respuestas.
-- 📚 Creación y organización de temas de estudio.
-- 🃏 Tarjetas de estudio interactivas.
-- 📝 Modo cuestionario.
-- 📊 Visualización de resultados.
-- 💾 Guardado de información mediante `localStorage`.
-- 🗑️ Eliminación de tarjetas y temas con confirmación.
-- 🔔 Sistema de notificaciones personalizado.
-- ⌨️ Navegación mediante teclado.
-- 📱 Diseño responsive.
-- ✨ Interfaz moderna con efectos glassmorphism.
-- 🌙 Diseño oscuro.
-- ⚡ Aplicación ejecutada directamente desde el navegador.
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-- **HTML5** — estructura de la aplicación.
-- **CSS3** — diseño, responsive design, animaciones y efectos visuales.
-- **JavaScript** — lógica, navegación, generación de preguntas y gestión de datos.
-- **PDF.js** — extracción de texto de archivos PDF.
-- **Tesseract.js** — reconocimiento óptico de caracteres (OCR).
-- **LocalStorage** — almacenamiento local de temas y tarjetas.
-- **Git** — control de versiones.
-- **GitHub** — alojamiento del proyecto.
-- **GitHub Pages** — publicación de la aplicación.
-
----
-
-## 📂 Estructura del proyecto
-
-```text
-app_estudio/
-│
-├── capturas/
-│   ├── estudio.png
-│   ├── importacion.png
-│   ├── inicio.png
-│   └── quiz.png
-│
-├── index.html
-├── README.md
-├── script.js
-└── style.css
-```
-
----
-
-## 🔎 Funcionalidades principales
-
-### 📄 Importación de documentos
-
-Estudio permite importar documentos PDF directamente desde la aplicación.
-
-El sistema analiza el documento y extrae automáticamente el texto disponible.
-
-Cuando el PDF contiene páginas escaneadas o imágenes sin texto seleccionable, se utiliza OCR para reconocer el contenido.
-
-### 🖼️ Importación de imágenes
-
-También es posible importar imágenes para convertir su contenido en texto.
-
-Formatos compatibles:
-
-- PNG
-- JPG
-- JPEG
-
-El sistema utiliza **Tesseract.js** para reconocer el texto contenido en las imágenes.
-
-### 🧠 Generación de preguntas
-
-Después de extraer el contenido, Estudio analiza el texto y busca diferentes estructuras que pueden convertirse en preguntas y respuestas.
-
-El sistema puede detectar:
-
-- Preguntas y respuestas explícitas.
-- Definiciones.
-- Conceptos importantes.
-- Eventos.
-- Encabezados acompañados de información.
-- Párrafos con contenido relevante.
-
-Las preguntas generadas pueden utilizarse posteriormente en las tarjetas de estudio y cuestionarios.
-
-### 🃏 Tarjetas de estudio
-
-Las tarjetas permiten repasar el contenido de manera interactiva.
-
-Cada tarjeta contiene:
-
-- ❓ Pregunta.
-- 💡 Respuesta.
-- 🔄 Interacción para estudiar.
-- 🗑️ Opción para eliminar la tarjeta.
-
-Los temas y tarjetas se almacenan localmente en el navegador.
-
-### 📝 Cuestionario
-
-El modo cuestionario permite utilizar las preguntas generadas para realizar una sesión de práctica.
-
-Durante el cuestionario se puede:
-
-- Responder preguntas.
-- Avanzar entre preguntas.
-- Utilizar navegación mediante teclado.
-- Finalizar el cuestionario.
-- Consultar los resultados obtenidos.
-
-### 📊 Resultados
-
-Al finalizar un cuestionario, Estudio muestra un resumen de la sesión.
-
-Esto permite revisar el resultado obtenido y volver a estudiar el contenido cuando sea necesario.
-
-### 💾 Almacenamiento local
-
-Los temas y tarjetas se almacenan mediante `localStorage`.
-
-Esto permite conservar la información incluso después de cerrar y volver a abrir el navegador.
-
-La aplicación no necesita una base de datos ni un servidor backend para sus funciones principales.
-
-### 🗑️ Gestión de temas y tarjetas
-
-Los usuarios pueden eliminar temas y tarjetas.
-
-Antes de realizar una eliminación, Estudio muestra una ventana de confirmación personalizada para evitar eliminaciones accidentales.
-
-### 🔔 Notificaciones
-
-La aplicación utiliza un sistema de notificaciones integrado visualmente con la interfaz.
-
-Esto evita depender de los cuadros de diálogo predeterminados del navegador.
-
-### 📱 Diseño responsive
-
-La interfaz se adapta a diferentes tamaños de pantalla para facilitar su utilización en:
-
-- 💻 Computadoras.
-- 📱 Teléfonos móviles.
-- 📲 Tablets.
-
----
-
-## 📸 Capturas de pantalla
-
-### 🏠 Página de inicio
+**[Ver el proyecto en vivo →](https://jimenaturcios448.github.io/App_Estudio/)**
 
 ![Página de inicio](capturas/inicio.png)
 
-### 📄 Importación de documentos
+## Qué hace
+
+- Importa PDFs e imágenes (PNG/JPG) y extrae el texto automáticamente, usando OCR cuando el documento no tiene texto seleccionable.
+- Genera tarjetas de pregunta/respuesta a partir de ese texto, listas para editar antes de guardarlas.
+- Modo flashcards: tarjetas que se voltean, con opción de mezclar el orden.
+- Modo quiz: preguntas de opción múltiple generadas del mismo mazo, con resultados al final.
+- Organiza el contenido por temas, y todo se guarda en el navegador (`localStorage`) sin necesidad de servidor.
 
 ![Importación de documentos](capturas/importacion.png)
 
-### 🃏 Modo de estudio
+## Cómo se ve estudiando
 
 ![Modo de estudio](capturas/estudio.png)
 
-### 📝 Cuestionario
-
 ![Cuestionario](capturas/quiz.png)
 
----
+## Tecnologías
 
-## 🌐 Proyecto publicado
+HTML, CSS y JavaScript puro — sin frameworks ni backend. Para la extracción de texto usa [PDF.js](https://mozilla.github.io/pdf.js/) (lectura de PDFs) y [Tesseract.js](https://tesseract.projectnaptha.com/) (OCR sobre imágenes).
 
-La aplicación está disponible mediante GitHub Pages.
+## Estructura del proyecto
 
-### 🚀 Abrir Estudio
-
-**[👉 Ver aplicación en vivo](https://jimenaturcios448.github.io/app_estudio/)**
-
-### 💻 Código fuente
-
-**[👉 Ver repositorio en GitHub](https://github.com/jimenaturcios448/app_estudio)**
-
----
-
-## 🚀 Cómo ejecutar el proyecto
-
-Estudio no requiere instalar dependencias adicionales para utilizar sus funciones principales.
-
-### Opción 1 — Abrir directamente
-
-Descarga o clona el repositorio y abre:
-
-```text
-index.html
+```
+App_Estudio/
+├── capturas/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
-en un navegador web.
+## Cómo probarlo localmente
 
-### Opción 2 — Visual Studio Code
-
-1. Clona el repositorio.
-2. Abre la carpeta `app_estudio` en Visual Studio Code.
-3. Abre el archivo `index.html`.
-4. Ejecuta el proyecto utilizando un servidor local como **Live Server**.
-
----
-
-## 📥 Clonar el proyecto
-
-Para obtener una copia local del proyecto:
+Clona el repositorio y abre `index.html` en tu navegador (o usa la extensión Live Server en VS Code):
 
 ```bash
-git clone https://github.com/jimenaturcios448/app_estudio.git
+git clone https://github.com/jimenaturcios448/App_Estudio.git
+cd App_Estudio
 ```
 
-Después entra en la carpeta:
+## Por qué lo hice
 
-```bash
-cd app_estudio
-```
+Proyecto de portafolio para practicar manipulación del DOM sin frameworks, manejo de `localStorage` como persistencia, e integración de librerías externas (PDF.js y Tesseract.js) en un flujo real de usuario.
 
-Luego puedes abrir la carpeta en Visual Studio Code.
+## Autora
 
----
-
-## 🔗 Librerías utilizadas
-
-### PDF.js
-
-Utilizada para procesar y extraer texto de documentos PDF.
-
-[PDF.js](https://mozilla.github.io/pdf.js/)
-
-### Tesseract.js
-
-Utilizada para realizar reconocimiento óptico de caracteres (OCR).
-
-[Tesseract.js](https://tesseract.projectnaptha.com/)
-
----
-
-## 🎯 Objetivo del proyecto
-
-Estudio fue desarrollado como parte de un portafolio de desarrollo de software con el objetivo de demostrar conocimientos en:
-
-- Desarrollo frontend.
-- HTML5.
-- CSS3.
-- JavaScript.
-- Manipulación del DOM.
-- Procesamiento de documentos.
-- Reconocimiento óptico de caracteres.
-- Generación dinámica de contenido.
-- Almacenamiento local.
-- Diseño responsive.
-- Diseño de interfaces modernas.
-- Animaciones y transiciones.
-- Integración de librerías externas.
-- Control de versiones con Git.
-- Uso de GitHub.
-- Publicación mediante GitHub Pages.
-
----
-
-## 📚 Aprendizajes
-
-Durante el desarrollo del proyecto se trabajaron conceptos como:
-
-- Creación de interfaces web desde cero.
-- Separación de estructura, estilos y lógica.
-- Manipulación del DOM mediante JavaScript.
-- Manejo de eventos.
-- Uso de `localStorage`.
-- Procesamiento de archivos PDF.
-- Implementación de OCR.
-- Generación dinámica de elementos HTML.
-- Creación de tarjetas de estudio.
-- Implementación de cuestionarios.
-- Creación de ventanas modales.
-- Diseño responsive.
-- Integración de librerías externas.
-- Organización de proyectos frontend.
-- Uso de Git y GitHub.
-- Publicación de aplicaciones mediante GitHub Pages.
-
----
-## 👩‍💻 Autora
-
-**Jimena Turcios**
-
-Proyecto desarrollado como parte de un portafolio de desarrollo de software.
-
-🔗 [**GitHub — jimenaturcios448**](https://github.com/jimenaturcios448)
-
----
-
-## 📄 Licencia
-
-Este proyecto fue desarrollado con fines educativos y de portafolio.
+**Jimena Turcios** — [github.com/jimenaturcios448](https://github.com/jimenaturcios448)
